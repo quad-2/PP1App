@@ -35,10 +35,6 @@ public class VerifyApplication extends Application {
             // warnings about expected activity counts
             enableStrictMode();
         }
-
-
-
-
         AccountKit.initialize(getApplicationContext());
     }
 

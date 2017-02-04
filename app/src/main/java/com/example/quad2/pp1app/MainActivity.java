@@ -38,7 +38,7 @@ import io.branch.referral.util.ShareSheetStyle;
 public class MainActivity extends AppCompatActivity {
 
     private DigitsAuthButton digitsButton;
-    BranchUniversalObject branchUniversalObject;
+    private BranchUniversalObject branchUniversalObject;
 
     private static final int FRAMEWORK_REQUEST_CODE = 1;
 
@@ -67,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
                 onLogin(LoginType.EMAIL);
             }
         });
-        // Hook up your share button to initiate sharing
         findViewById(R.id.buttonShare).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
@@ -338,13 +337,11 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onChannelSelected(String channelName) {
-                Log.d("tesss", channelName+"****"+linkProperties.toString());
             }
 
             @Override
             public void onLinkShareResponse(String sharedLink, String sharedChannel, BranchError error) {
                 // The link will be available in sharedLink
-                Log.d("besssss", sharedLink+"****"+error.toString()+"****"+sharedChannel);
             }
         });
     }
